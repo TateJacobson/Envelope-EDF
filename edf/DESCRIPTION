@@ -1,0 +1,11 @@
+Package: edf
+Version: 1.0
+Date: 2020-04-26
+Title: Effective Degrees of Freedom
+Author: Tate A. Jacobson <jaco2583@umn.edu>
+Maintainer: Tate A. Jacobson <jaco2583@umn.edu>
+Depends: R (>= 3.6.1)
+Suggests: MASS, tree
+Imports: stats, methods, pls, glmnet, parallel, tidyr
+Description: Computes the effective degrees of freedom for user-specified model fitting methods.
+License: GPL-2

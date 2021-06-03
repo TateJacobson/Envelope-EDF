@@ -1,0 +1,3 @@
+import(stats, except = loadings)
+import(methods, pls, glmnet, parallel, tidyr)
+export(edf, lm_fitted, pls_fitted, glmnet_fitted, step_fitted)
