@@ -42,8 +42,8 @@ edf_dims <- matrix(0, nrow = loop_iter, ncol = length(dims))
 for(i in 1:loop_iter){
     beta <- c(rgamma(5,2,scale = 2), rep(0,4))
 
-    for(j in dims){
-      edf_dims[i,j] <- edf(x, beta, sigma, B, FUN = envlp_fit, ncores = ncores, u = j)$edf
+    for(j in 1:length(dims)){
+      edf_dims[i,j] <- edf(x, beta, sigma, B, FUN = envlp_fit, ncores = ncores, u = dims[j])$edf
     }
 }
 

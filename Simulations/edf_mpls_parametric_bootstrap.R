@@ -40,8 +40,8 @@ dims <- 1:5
 dim_means <- rep(0, length(dims))
 
 ##### Run Simulations #####
-for(j in dims){
-    dim_means[j] <- edf(x, beta, sigma, B, FUN = envlp_fit, ncores = ncores, u = j)$edf
+for(j in 1:length(dims)){
+    dim_means[j] <- edf(x, beta, sigma, B, FUN = envlp_fit, ncores = ncores, u = dims[j])$edf
 }
 
 # Because this script takes so long to run, I had it save the output so I could import it later to create plots for the paper.

@@ -68,8 +68,8 @@ for(r in 1:length(rhos)){
     # Shuffle betas for compound symmetry and AR1 simulations, but not block simulations
     beta <- sample(beta_init)
     
-    for(j in dims){
-      edf_out <- edf(x, beta, sigma, B, FUN = envlp_fit, ncores = ncores, u = j)
+    for(j in 1:length(dims)){
+      edf_out <- edf(x, beta, sigma, B, FUN = envlp_fit, ncores = ncores, u = dims[j])
       edf_dims[i,j] <- edf_out$edf
       rss_dims[i,j] <- edf_out$rss
       test_rss_dims[i,j] <- edf_out$test_rss

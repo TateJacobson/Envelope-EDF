@@ -31,7 +31,7 @@ Hastie et al. further justify the effective degrees of freedom by showing that t
 
 The \code{edf} function approximates the effective degrees of freedom by computing the sample covariance of the replicates of \eqn{Y_i} and \eqn{\hat{Y_i}} for each \eqn{i} over \code{reps} Monte Carlo iterations.
 
-The \code{edf} function uses \code{mclapply} from the \code{parallel} package in order to reduce computation time.  As such, this function will not run on Windows systems.
+The \code{edf} function uses \link{mclapply} from the \link{parallel} package in order to reduce computation time. On Windows systems, which do not support forking, \link{mclapply} simply calls \link{lapply}.
 }
 \references{
 Hastie, T., Tibshirani, R. & Friedman, J. (2009) \emph{The Elements of Statistical Learning}. 2nd Ed., New York, NY: Springer-Verlag.
